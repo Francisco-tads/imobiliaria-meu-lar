@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lobster&family=Pacifico&family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,400;1,500&display=swap');
+:root {
+    --cor-azul-escuro: #18A0FB;
+    --cor-branco-padrao: #ffffff70;
+    --cor-fundo-comprar: #e5e5e5a3;
+    --cor-preto-padrao: #0000; 
+}
+@keyframes mexer {
+    25% {
+        transform: translateX(4px);
+    }
+    50% {
+        transform: translateX(-4px);
+    }
+    75% {
+        transform: translateX(4px);
+    }
+}
+@keyframes pular {
+    50% {
+        transform: translateY(-10px);
+    }
+}
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+body {
+    margin: 0;
+}
+.cabecalho{}
+.cabecalho__principal {
+    display: flex;
+    justify-content: center;
+ }
+    .cabecalho__imagem {
+        margin-top: 5px;
+        height: 41px;
+        width: 41px;
+        animation: aparecer 1s normal 100ms forwards;
+        opacity: 0;
+    }
+    .cabecalho__titulo {
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 10px;
+        font-family: 'Poppins', sans-serif;
+        animation: aparecer 1s normal 100ms forwards;
+        opacity: 0;
+    }
+    .botoes {
+        animation: aparecer 1s normal 500ms forwards;
+        opacity: 0;
+    }
+        .botoes__opcoes {
+            display: flex;
+            justify-content: space-around;
+            list-style:none;
+            padding: 0;
+        }
+            .botoes__opcoes--opcao {
+            }
+                .opcao__texto {
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                }
+                .opcao__entrar {
+                    background-color:var(--cor-branco-padrao);
+                    border:1px solid var(--cor-azul-escuro);
+                    color: var(--cor-azul-escuro);
+                    height: 20px;
+                    width: 110px;
+                    border-radius: 5px;  
+                }
+                .opcao__cadatrar {
+                    background-color: var(--cor-azul-escuro);
+                    border-radius: 5px ;
+                    color: var(--cor-branco-padrao);
+                    height: 20px;
+                    width: 110px;
+                }
+.principal {
+}
+    .principal__capa { 
+        position: relative; 
+        animation: aparecer 1s normal 900ms forwards;
+        opacity: 0;
+        
+    }
+        .principal__capa--imagem {
+            width: 100vw;
+            margin: 0;
+        }
+        .principal__textos {
+            position:absolute;
+            top: 0;
+        }
+            .principal__capa--texto1 {
+                margin: 29px 5px 0 10px;
+                font-size: 21px;
+                font-weight: 600;
+                font-family: 'Poppins', sans-serif;               
+            }
+            .principal__capa--texto2 {
+                margin: 2px 4px 5px 34px;
+                font-size: 17px;
+                font-family: 'Libre Baskerville', serif; 
+                
+            }
+    .principal__botoes {
+        display: flex;
+        justify-content: space-around;
+        color: var(--cor-azul-escuro);
+        animation: aparecer 1s normal 1300ms forwards;
+        opacity: 0;
+    }
+    .principal__pesquisar{
+        height: 61px;
+        display: flex;
+        animation: aparecer 1s normal 1500ms forwards;
+        opacity: 0;
+    }
+        .pesquisar__texto {
+            height: 34px;
+            width: 80vw;
+            border-radius: 20px;
+            border: 0;
+            background-color: var(--cor-fundo-comprar);
+            text-align: left ;
+            padding-left: 15px;
+            margin:15px auto;
+            border: 2px solid var(--cor-azul-escuro);
+            outline: none;
+        }
+        .pesquisar__texto:invalid {
+            animation: mexer 300ms;
+            border: 2px solid #f00;
+        }
+.principal__alugar {}
+    .principal__alugar--titulo {
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+        animation: aparecer 1s normal 1600ms forwards;
+        opacity: 0;
+    }
+    .alugar__apartamento {}
+        .alugar__apartamento--titulo {
+            margin: 5px 0 10px 20px;
+            font-family: 'Poppins', sans-serif;
+            animation: aparecer 1s normal 1700ms forwards;
+            opacity: 0;
+        }
+        .alugar__apartamento--opcoes {
+            display: flex;
+            overflow: scroll;
+            padding: 10px;
+            animation: aparecer 1s normal 1800ms forwards;
+            opacity: 0;
+        }
+            .apartamentos__opcao {
+                list-style:none;
+                margin: 0 10px 5px 10px;  
+            }
+                .apartamentos__opcao__imagem {
+                    height: 183px;
+                    width: 199px;
+                }
+                .apartamentos__opcao--informacao {
+                    font-size: 20px;
+                    margin: 2px 0 5px 0;;
+                }
+                .apartamentos__opcao--texto {
+                    margin: 0;
+                }
+                .alugar__apartamento--botao {
+                    margin: 5px 20px 0 20px;
+                    border:1px solid var(--cor-azul-escuro);
+                    border-radius: 5px;
+                    color: var(--cor-azul-escuro);
+                    width: auto;
+                    text-align: center;
+                }
+    .alugar__casa {}
+            .alugar__casa--titulo {
+                margin: 5px 0 10px 20px;
+                font-family: 'Poppins', sans-serif;
+                animation: aparecer 1s normal 1900ms forwards;
+                opacity: 0;
+            }
+            .alugar__casa--opcoes {
+                display: flex;
+                overflow: scroll;
+                padding: 10px;
+                animation: aparecer 1s normal 2000ms forwards;
+                opacity: 0;
+            }
+                .casa__opcao {
+                    list-style:none;
+                    margin: 0 10px 5px 10px;  
+                }
+                    .casa__opcao__imagem {
+                        height: 183px;
+                        width: 199px;
+                    }
+                    .casa__opcao--informacao {
+                        font-size: 20px;
+                        margin: 2px 0 5px 0;;
+                    }
+                    .casa__opcao--texto {
+                        margin: 0;
+                    }
+                    .alugar__casa--botao {
+                        margin: 5px 20px 0 20px;
+                        border:1px solid var(--cor-azul-escuro);
+                        border-radius: 5px;
+                        color: var(--cor-azul-escuro);
+                        width: auto;
+                        text-align: center;
+                    }
+.principal__comprar {
+    background-color: var(--cor-fundo-comprar);
+    margin: 20px 0 30px 0;
+}
+    .principal__comprar--titulo {
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+        animation: aparecer 1s normal 2100ms forwards;
+        opacity: 0;
+    }
+    .comprar__apartamento {}
+        .comprar__apartamento--titulo {
+            margin: 5px 0 10px 20px;
+            font-family: 'Poppins', sans-serif;
+            animation: aparecer 1s normal 2200ms forwards;
+            opacity: 0;
+        }
+        .comprar__apartamento--opcoes {
+            display: flex;
+            overflow: scroll;
+            padding: 11px;
+            animation: aparecer 1s normal 2300ms forwards;
+            opacity: 0;
+        }
+            .apartamentos__opcao {
+                list-style:none;
+                margin: 0 10px 5px 10px;  
+            }
+                .apartamentos__opcao__imagem {
+                    height: 182px;
+                    width: 199px;
+                }
+                .apartamentos__opcao--informacao {
+                    font-size: 20px;
+                    margin: 2px 0 5px 0;
+                }
+                .apartamentos__opcao--texto {
+                    margin: 0;
+                }
+                .apartamentos__opcao--botao {
+                    margin: 5px 21px 0 20px;
+                    border:1px solid var(--cor-branco-padrao);
+                    border-radius: 5px;
+                    color: var(--cor-fundo-comprar);
+                    width: auto;
+                    text-align: center;
+                    background-color: var(--cor-azul-escuro);
+                }
+    .comprar__casa {}
+            .comprar__casa--titulo {
+                margin: 5px 0 10px 20px;
+                font-family: 'Poppins', sans-serif;
+                animation: aparecer 1s normal 2400ms forwards;
+                opacity: 0;
+            }
+            .comprar__casa--opcoes {
+                display: flex;
+                overflow: scroll;
+                padding: 10px;
+                animation: aparecer 1s normal 2500ms forwards;
+                opacity: 0;
+            }
+                .casas__opcao {
+                    list-style:none;
+                    margin: 0 10px 5px 10px;  
+                }
+                    .casas__opcao__imagem {
+                        height: 183px;
+                        width: 199px;
+                    }
+                    .casas__opcao--informacao {
+                        font-size: 20px;
+                        margin: 2px 0 5px 0;;
+                    }
+                    .casas__opcao--texto {
+                        margin: 0;
+                    }
+                    .casa__opcao--botao {
+                        margin: 5px 20px 0 20px;
+                        border:1px solid var(--cor-branco-padrao);
+                        border-radius: 5px;
+                        color: var(--cor-fundo-comprar);
+                        width: auto;
+                        text-align: center;
+                        background-color: var(--cor-azul-escuro);
+                    }
+    .principal__anuncio{
+    }
+        .principal__anuncio--imagem {
+            height: 150px;
+            width: 100vw;
+            animation: aparecer 1s normal 2700ms forwards;
+            opacity: 0;
+            
+        }
+        .principal__anuncio--titulo{
+            font-size: 19px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            margin: 5px;
+            animation: aparecer 1s normal 2800ms forwards;
+            opacity: 0;
+        }
+        .principal__anuncio--opcoes{
+            display: flex;
+            justify-content: space-around;
+            list-style:none;
+            animation: aparecer 1s normal 2900ms forwards;
+            opacity: 0;
+        }
+            .principal__anuncio--opcao{}
+                .principal__anuncio--apartamento{
+                    background-color: var(--cor-branco-padrao);
+                    border-radius: 5px ;
+                    color: var(--cor-azul-escuro);
+                    height: 20px;
+                    width: 110px;
+                    margin: 0;
+                    text-align: center;
+                    border: 1px solid var(--cor-azul-escuro);
+                }
+                .principal__anuncio--casa{
+                    background-color: var(--cor-azul-escuro);
+                    border-radius: 5px ;
+                    color: var(--cor-branco-padrao);
+                    height: 20px;
+                    width: 110px;
+                    margin: 0;
+                    text-align: center;
+                    }
+    .principal__principios {
+        padding-bottom: 30px;
+    }
+        .principal__principios--titulo {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 35px 0 20px 0 ;
+            font-family: 'Poppins', sans-serif;
+            animation: aparecer 1s normal 3100ms forwards;
+            opacity: 0;
+        }
+        .principal__principios--opcoes {
+            display: flex;
+            overflow-x: scroll;
+            cursor: pointer;
+            list-style:none;
+            padding: 10px;
+            animation: aparecer 1s normal 3200ms forwards;
+            opacity: 0;
+        }
+            .principal__principios--opcao {
+                background-color: var(--cor-fundo-comprar);
+                padding: 15px;
+                min-width: 270px;
+                margin: 0 10px;
+                border-radius: 20px;
+                box-shadow: var(--cor-azul-escuro) 0px 7px 7px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+            }
+                .principios__opcao--titulo {
+                    color: var(--fonte-do-main);
+                    margin: 3px;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 20px;
+                }
+                .principios__opcao--texto {
+                    font-size: 16px;
+                } 
+    .principal__contato {
+        display: flex;
+        justify-content: center;
+        animation: aparecer 1s normal 3200ms forwards;
+        opacity: 0;
+    }
+        .principal__contato--imagem {
+            height: 25px;
+            width: 25px;
+            margin:4px;
+        }
+        .animacao1{
+            transition: 150ms ease;
+            animation: pular 1s infinite backwards 100ms;
+        }
+        .animacao2{
+            transition: 150ms ease;
+            animation: pular 1s infinite backwards 200ms;
+        }
+        .animacao3{
+            transition: 150ms ease;
+            animation: pular 1s infinite backwards 300ms;
+        }
+.rodape {
+    display: flex;
+    justify-content: center;
+    border-top:0.5px solid #000 ;
+    margin: 2px 15px 0 15px;
+    animation: aparecer 1s normal 3300ms forwards;
+    opacity: 0;
+}
+    .rodape__imagem {
+        height: 30px;
+        width: 30px;
+        margin-top: 15px;
+        
+    }
+    .rodape__titulo {
+        font-size: 15px;
+        font-weight: 500;
+        margin-left: 10px;
+        font-family: 'Poppins', sans-serif;
+    }
+@media(min-width:800px) {
+.cabecalho{}        
+    .botoes__opcoes {
+        justify-content: space-evenly;
+    }
+    .principal__capa {
+        width: 90vw;
+        margin: 0 auto;
+    }
+        .principal__capa--imagem {
+            width: 90vw;
+            height: 467px;
+            margin: 0 auto;
+            display: block;
+        }
+            .principal__capa--texto1 {
+                margin: 40px 5px 0 50px;
+                font-size: 30px;
+                font-weight: 400;              
+            }
+            .principal__capa--texto2 {
+                margin: 2px 4px 5px 60px;
+                font-size: 18px;
+            }
+            .principal__anuncio--imagem {
+                width: 70vw;
+                height: 250px;
+                margin: 0 auto;
+                display: block;
+            }
+            .principal__anuncio--titulo{
+                font-size: 20px;
+            }
+            .principal__anuncio--opcoes{
+                justify-content: space-evenly;
+            }
+            .principal__pesquisar{
+                width: 50vw;
+                margin: 0 auto;
+                
+            }
+}
